@@ -1,0 +1,24 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^19.3.0"
+  },
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicolasr94/FacturadorJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nicolasr94/FacturadorJS/issues"
+  },
+  "homepage": "https://github.com/Nicolasr94/FacturadorJS#readme",
+  "description": ""
+}
