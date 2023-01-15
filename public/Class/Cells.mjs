@@ -1,6 +1,6 @@
 export default class Cells {
    
-    #id
+    id
     nombre
     precio
     cantidad
@@ -8,7 +8,7 @@ export default class Cells {
     
     constructor(objeto){
       console.log(objeto.name);
-      this.#id = Math.random().toString(20).substring(2);
+      this.id = 'a' + Math.random().toString(20).substring(2);
       this.nombre = objeto.name
       this.precio = Number(objeto.price)
       this.cantidad = Number(objeto.amount)
@@ -21,7 +21,7 @@ export default class Cells {
 
 
    setCantidad(id,cantidad){
-    if(id !== this.#id){
+    if(id !== this.id){
       return console.error('No se pudo realizar la acción');
     }else{
       this.cantidad = cantidad;
@@ -29,14 +29,14 @@ export default class Cells {
    }
  
    setName(id,nombre){
-    if(id !== this.#id){
+    if(id !== this.id){
       return console.error('No se pudo realizar la acción');
     }else{ 
     this.nombre = nombre;
     }
    }
    setPrecio(id,precio){
-    if(id !== this.#id){
+    if(id !== this.id){
       return console.error('No se pudo realizar la acción');
     }else{
     this.precio = precio;
