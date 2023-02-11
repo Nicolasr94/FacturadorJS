@@ -23,10 +23,21 @@
         </header>
     <main>
 
+        <template class="templateCell">
+            <div class="rowCell" style="display: flex;">
+            <input class="cellName" type="text" disabled></input>
+            <input class="cellPrice" type="number" disabled></input>
+            <input class="cellAmount" type="number" disabled></input>
+            <button class="editBtn" data-btn="edit" type="button">Editar</button>
+            <button class="deleteBtn" data-btn="delete" type="button">Borrar</button>
+        </div>
+    
+        </template>            
+
         <h2>Lista Factura</h2>
-        <ol id="containerCell">
+        <div id="containerCell">
             
-        </ol>
+        </div>
       <button>Finalizar</button>
       <div id="total">Total $</div>
 </main>

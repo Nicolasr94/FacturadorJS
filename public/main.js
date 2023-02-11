@@ -1,42 +1,28 @@
 import   Cells from "./Class/Cells.mjs";
 import   Bill from "./Class/Bill.mjs";
-import createNode from "./controllers/createNode.mjs";
-
-//  import formValues from "./controllers/formController.mjs";
-
-// let Inputs = document.querySelectorAll('#formCell input')
-// let ButtonSend = document.querySelector('#buttonSend');
+import insertCell from "./controllers/insertCell.mjs";
+import btsEvents from  "./controllers/btsEvents.mjs";
 let Form = document.querySelector("#formCell")
-
-let bill = new Bill('ELpepe')
-let billLista = [];
+let $containerCell = document.getElementById("containerCell")
+const bill = new Bill('ELpepe')
 let cell;
 
-Form.addEventListener("submit",e =>{
-    e.preventDefault()
-    let data = Object.fromEntries(new FormData(e.target))
-    console.log(data)
-    if(data){
-        
-        cell = new Cells(data);
-        billLista.push(cell);
-        console.log(bill); 
-        createNode(data);
+    Form.addEventListener("submit",function(es){
+        es.preventDefault()
+
+        let data = Object.fromEntries(new FormData(es.target))
+        cell = new Cells(data)   
+        bill.list.push(cell)
+        insertCell(cell)
+
+        })      
+        if($containerCell){  
+        $containerCell.addEventListener('click',function(e){
+            let target = e.target
+            console.log(e.target.parentElement.parentElement.parentElement)
+            if(target.tagName == "BUTTON"){
+            btsEvents(target,bill,e.target.parentElement['cellName'].id)
+            }
+        })
     }
-})
-
-// let factura = new Bill('Juan')
-// let cell1 = new Cells('Sahumerio',150,5)
-// let cell2 = new Cells('Bombita',200,5)
-// factura.addCells(cell1)
-// factura.addCells(cell2)
-// console.log(factura)
-
-// factura.setTotal()
-// console.log(factura)
-
-
-
-
-
 
