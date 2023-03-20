@@ -13,13 +13,13 @@ const $templateCell = document.querySelector(".templateCell").content,
 
 export default  function insertCell (cell) {
         $cellName.id = cell.getId()
-        $cellName.placeholder = cell.getName()
+        $cellName.value = cell.getNombre()
         
         $cellAmount.id = cell.id;
-        $cellAmount.placeholder = cell.getAmount()
+        $cellAmount.value = cell.getCantidad()
         
         $cellPrice.id = cell.id
-        $cellPrice.placeholder = cell.getPrice()
+        $cellPrice.value = cell.getPrecio()
 
         $cellButtonEdit.id = cell.getId()
         $cellButtonDelete.id = cell.getId() 

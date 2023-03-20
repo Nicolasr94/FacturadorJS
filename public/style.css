@@ -1,3 +1,39 @@
-*{
-    background-color: hsl(0, 50%, 98%);
+body{
+    width: 60vw;
+    margin: auto;
+    background-color: #1F8A70;
+}
+header{
+    text-align: center;
+    background-color: #FFB100
+}
+button{
+    background-color: #FC7300;
+}
+.sectionFormCell{
+    border: 1px solid black;
+    background-color: #FBC252;
+    height: 6vh;
+    
+}
+#formCell {
+    display: flex;
+    width: 100%;
+    justify-content:space-around;
+    justify-items: center;
+    align-self: baseline;
+}
+
+#formCell label{
+    margin-left:1vw;
+}
+
+#formCell div{
+    margin: auto;
+}
+
+
+
+.templateCell div{
+    background-color: #FBC252;
 }

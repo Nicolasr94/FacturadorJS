@@ -2,10 +2,16 @@ import btnConfirm from "./btnConfirm.mjs"
 import btnDelete from "./btnDelete.mjs"
 import btnEdit from "./btnEdit.mjs"
 
-export default function controllerEvents(target,bill,cell){
+export default function controllerEvents(target,factura,item){
   let  action = target.dataset.btn
   if(action == 'delete'){
-    btnDelete(target,bill,cell)
+    btnDelete(target,factura,item.id)
+  }
+  if(action == 'edit'){
+    btnEdit(target,factura,item) 
+  }
+  if(action=='confirm'){
+    btnConfirm(target,factura,item)
   }
     }
     
@@ -14,11 +20,11 @@ export default function controllerEvents(target,bill,cell){
 // switch(action){
 //     case 'delete':
 //         console.log('entro')
-//         btnDelete(target,bill,cell)
+//         btnDelete(target,factura,item)
 //         break;
 //     case 'edit':
-//         btnEdit(target,cell)
+//         btnEdit(target,item)
 //         break;
 //     case 'confirm':
-//             btnConfirm(target,cell)
+//             btnConfirm(target,item)
 //         break;

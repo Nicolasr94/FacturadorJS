@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>|
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +10,33 @@
 <body>
     <header>
         <h1>Facturador</h1>
-
+        <h2>Mayorista/Minorista</h2>
+    </header>
+<section  class="sectionFormCell">
         <form id="formCell">
+            <div>
             <label for="name">Articulo</label>
                 <input id="name" name="name"></input>
+            </div>
+
+            <div>
             <label for="price">Precio</label>
                 <input id="price" name="price"></input>
+            </div>
+            <div>
             <label for="aomunt">Cantidad</label>            
                 <input id="amount" name="amount"></input>
+            </div>
+                <div>
                 <button id="buttonSend" type="submit">Agregar</button>
+            </div>
             </form>
-        </header>
+</section>            
+        
     <main>
 
         <template class="templateCell">
-            <div class="rowCell" style="display: flex;">
+        <div class="rowCell" style="display: flex;">
             <input class="cellName" type="text" disabled></input>
             <input class="cellPrice" type="number" disabled></input>
             <input class="cellAmount" type="number" disabled></input>

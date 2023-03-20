@@ -1,4 +1,4 @@
-export default class Cells {
+export default class ItemDeFactura {
    
     id
     nombre
@@ -20,37 +20,26 @@ export default class Cells {
        return this.subTotal
    }
 
-   getName(){
+   getNombre(){
     return this.nombre
 }
-  getPrice(){
+  getPrecio(){
   return this.precio
 }
-  getAmount(){
+  getCantidad(){
     return this.cantidad
   }
-   setCantidad(id,cantidad){
-    if(id !== this.id){
-      return console.error('No se pudo realizar la acción');
-    }else{
+   setCantidad(cantidad){
       this.cantidad = cantidad;
-    }
    }
  
-   setName(id,nombre){
-    if(id !== this.id){
-      return console.error('No se pudo realizar la acción');
-    }else{ 
+   setNombre(nombre){
     this.nombre = nombre;
-    }
    }
    
-   setPrecio(id,precio){
-    if(id !== this.id){
-      return console.error('No se pudo realizar la acción');
-    }else{
+   setPrecio(precio){
     this.precio = precio;
-    }
+    
    }
  
  }
