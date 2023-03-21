@@ -1,27 +1,48 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root{
+    --primary-color:#FAC05E ;
+    --secondary-color:#3FA7D6;
+    --third-color:#F6F7EB;
+    --button-color:#59CD90;
+}
+
 body{
-    width: 60vw;
-    margin: auto;
-    background-color: #1F8A70;
+    width: 100vw;
+    background-color: var(--primary-color);
+}
+
+h2{
+    text-decoration:underline;
+}
+h3{
+    text-decoration:underline;
 }
 header{
     text-align: center;
-    background-color: #FFB100
+    background-color: var(--secondary-color)
 }
-button{
-    background-color: #FC7300;
-}
-.sectionFormCell{
+
+
+.firstSection{
+    display: flex;
     border: 1px solid black;
-    background-color: #FBC252;
+    background-color: var(--secondary-color);
+    margin: auto;
+    width: 50vw;
     height: 6vh;
-    
+    font-weight:bolder;
+    color: var(--third-color);
+    margin-bottom: 1rem;
 }
+
 #formCell {
     display: flex;
     width: 100%;
     justify-content:space-around;
-    justify-items: center;
-    align-self: baseline;
 }
 
 #formCell label{
@@ -31,9 +52,68 @@ button{
 #formCell div{
     margin: auto;
 }
+main{
+    display: flex;
+    background-color: var(--third-color);
+    width: 50vw;
+    justify-content: space-between;
+    font-weight:bolder;
+    margin: auto;
+}
 
+.secondSection{
+    display: flex;
+    flex-direction: column;
+}
+.secondSection input{
+    margin-left: .2rem;
+    margin-top: .2rem;
+}
+
+.footerBill{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: .5rem;
+}
+
+.footerBill button{
+    height: 1.5rem;
+}
+
+.thirdSection{
+    width: 20%;
+}
 
 
 .templateCell div{
-    background-color: #FBC252;
+    background-color: var(--secondary-color)
+}
+
+
+/* Edicion de botones e inputs */ 
+button {
+    width:5.5rem;
+    height: 1.9rem;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid var(--third-color);
+    background: var(--primary-color);
+  }
+
+
+
+button:hover {
+    cursor:pointer;
+}
+input{
+    border: 0;
+    border-radius: .2rem;
+    text-align: center;
+    width: 10rem;
 }

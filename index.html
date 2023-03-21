@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>|
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +12,11 @@
         <h1>Facturador</h1>
         <h2>Mayorista/Minorista</h2>
     </header>
-<section  class="sectionFormCell">
+<section  class="firstSection">
         <form id="formCell">
             <div>
             <label for="name">Articulo</label>
-                <input id="name" name="name"></input>
+                <input id="name" name="name" autofocus="true"></input>
             </div>
 
             <div>
@@ -34,24 +34,31 @@
 </section>            
         
     <main>
-
-        <template class="templateCell">
-        <div class="rowCell" style="display: flex;">
-            <input class="cellName" type="text" disabled></input>
-            <input class="cellPrice" type="number" disabled></input>
-            <input class="cellAmount" type="number" disabled></input>
-            <button class="editBtn" data-btn="edit" type="button">Editar</button>
-            <button class="deleteBtn" data-btn="delete" type="button">Borrar</button>
-        </div>
-    
-        </template>            
-
+        <section class="secondSection">
         <h2>Lista Factura</h2>
         <div id="containerCell">
-            
+            <template class="templateCell">
+                <div class="rowCell" style="display: flex;">
+                    <input class="cellName" type="text" disabled></input>
+                    <input class="cellPrice" type="number" disabled></input>
+                    <input class="cellAmount" type="number" disabled></input>
+                    <button class="editBtn" data-btn="edit" type="button">Editar</button>
+                    <button class="deleteBtn" data-btn="delete" type="button">Borrar</button>
+                </div>
+            </template>                        
         </div>
-      <button>Finalizar</button>
-      <div id="total">Total $</div>
+    <div class="footerBill">
+        <div id="total">Total $</div>
+        <button>Finalizar</button>
+    </div>
+    </section>
+
+    <section class="thirdSection">
+        <h3> Resumen del turno</h3>
+        <div>Total de ventas</div>
+        <div>Total de facturas</div>
+        
+    </section>
 </main>
 </body>
 
