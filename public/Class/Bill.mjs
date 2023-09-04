@@ -5,10 +5,10 @@ let fechaHoy = new Date()
 
 export default class Bill {
     #id
-    fecha
+    date
     name
-    list = []
-    total = 0
+    list = [];
+    total = 0;
     instance;
    
     
@@ -19,7 +19,7 @@ export default class Bill {
         console.log('fui creado')
         instance = this;
           this.name = name
-          this.fecha = fechaHoy.toLocaleDateString('es-AR')
+          this.date = fechaHoy.toLocaleDateString('es-AR')
         }
 
     getName (){
@@ -38,22 +38,25 @@ export default class Bill {
   setList(lista){
     this.list = lista
   }
-  deleteCell(cell,list){
-  console.log(this.list.filter((e)=> e.id !== cell))
-
+  deleteCell(idCell){
+  this.list = this.list.filter((e)=> e.id !== idCell)
+  }
   
-  }  
+  setTotal(){
+    let acumulador = 0
+    console.log(this.list)
+    if(this.list.length !== 0){
+     this.total =  this.list.map((item) => {
+      this.total += item.subTotal 
+     });
+    }
+     console.log(this.total)
+
+    }  
 
     getTotal(){
-      let total=0;
-      this.list.map((item) => {
-       total += item.getSubTotal() 
-      })
-      return total 
+      return this.total 
     }
   
-    setTotal(){
-      this.total = this.getTotal();
-    }
   
   }

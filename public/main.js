@@ -7,21 +7,23 @@ let $containerCell = document.getElementById("containerCell")
 const bill = new Bill('ELpepe')
 let cell;
 
-    Form.addEventListener("submit",function(es){
+Form.addEventListener("submit",function(es){
+        console.log(bill.getTotal())
         es.preventDefault()
-
+        let $total = document.getElementById("total")
         let data = Object.fromEntries(new FormData(es.target))
         cell = new Cells(data)   
-        bill.list.push(cell)
+        bill.addCells(cell)
         insertCell(cell)
-
+        bill.setTotal()
+        let total = bill.getTotal()
+        $total.innerHTML = total
         })      
         if($containerCell){  
         $containerCell.addEventListener('click',function(e){
             let target = e.target
-            console.log(e.target.parentElement.parentElement.parentElement)
             if(target.tagName == "BUTTON"){
-            btsEvents(target,bill,e.target.parentElement['cellName'].id)
+            btsEvents(target,bill,target.id)
             }
         })
     }
